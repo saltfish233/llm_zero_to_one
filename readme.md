@@ -7,21 +7,28 @@
 目前只考虑多卡DDP训练，根据自身情况修改里面的一些属性：
 
 *preprocess*
-'''
+
+```
 python preprocess/convert_jsonl_to_bin_minimind_onlytrain.py
-'''
+```
+
 *pretrain*
-'''
+
+```
 sh train_20260515.sh
-'''
+```
+
 *sft*
-'''
+
+```
 sh sft_20260515.sh
-'''
+```
+
 *infer*
-'''
+
+```
 python llm_20260515_sft_infer.py
-'''
+```
 
 ## Insight
 1. generate中的采样策略非常影响回答质量，原本写的一个简单的采样策略发现回答效果很差，参考minimind的generate采样策略后发现生成质量提升非常大。因此如果模型训练正常的但回答质量不高的话，不一定是模型差劲，也可能是采样策略没写好。
@@ -35,7 +42,7 @@ python llm_20260515_sft_infer.py
 6. 理解think能力来源
 
 ## Presentation
-'''
+```
 python llm_20260515_sft_infer.py
 模型总参数量: 63.93M
 system
@@ -71,4 +78,4 @@ assistant
 无拘束
 在幻影里
 生长
-'''
+```
