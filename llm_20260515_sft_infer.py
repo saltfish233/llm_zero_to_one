@@ -478,7 +478,7 @@ if __name__ == "__main__":
     model.eval()
     prompt = [
         {"role": "system", "content": "你是一个知识丰富的AI，尽力为用户提供准确的信息。"},
-        {"role": "user", "content": "如何学习书法？"},
+        {"role": "user", "content": "写一首关于自由的诗？"},
     ]
     enc = AutoTokenizer.from_pretrained(GPTConfig.tokenizer_path)
     prompt = enc.apply_chat_template(prompt, tokenize=True,add_generation_prompt=True, open_thinking=True)
