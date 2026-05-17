@@ -1,14 +1,21 @@
 ## Introduction
 为了深入对LLM的理解，参考了minimind项目以及b站up主“chaofa用代码打点酱油”，应用新技术实现LLM并持续性优化。
-目前阶段不打算拆分不同类到不同文件夹
 
-# How to use
+而是让目前阶段不打算拆分不同类到不同文件夹，而是所有依赖都在一个py文件中。
+
+## How to use
 目前只考虑多卡DDP训练，根据自身情况修改里面的一些属性：
+
 *preprocess*
+
 python preprocess/convert_jsonl_to_bin_minimind_onlytrain.py
+
 *pretrain*
+
 sh train_20260515.sh
+
 *sft*
+
 sh sft_20260515.sh
 
 ## Insight
